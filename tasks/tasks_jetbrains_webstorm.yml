@@ -19,7 +19,7 @@
       -webstorm
       -setup
 
-  - debug: msg="command: curl -o {{apps_dir}}/webstorm.tar.gz https://download.jetbrains.com/webstorm/WebStorm-{{webstorm_version}}.tar.gz"
+  - debug: msg="curl -o {{apps_dir}}/webstorm.tar.gz https//download.jetbrains.com/webstorm/WebStorm-{{webstorm_version}}.tar.gz"
 
   - name: JetBrains WEBStorm| Download WEBStorm archive
     get_url:
@@ -34,7 +34,7 @@
       -setup
 
 
-  - name: JetBrains WEBStorm| Decompress phpStorm archive
+  - name: JetBrains WEBStorm| Decompress webStorm archive
     unarchive:
       src={{apps_dir}}/webstorm.tar.gz
       dest={{apps_dir}}
