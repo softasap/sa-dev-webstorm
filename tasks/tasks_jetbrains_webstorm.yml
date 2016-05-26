@@ -54,7 +54,7 @@
 
   - name: JetBrains WEBStorm| Move webStorm folder
     command: "mv {{webstorm_version.stdout}} {{apps_dir}}/webstorm"
-    when: phpstorm_exist.stat.exists == False
+    when: webstorm_exist.stat.exists == False
     args:
       chdir: "{{apps_dir}}"
     tags:
@@ -82,9 +82,9 @@
       mode=755
     with_items:
       - {
-      name: "PHPStorm",
-      exec: "{{apps_dir}}/phpstorm/bin/webstorm.sh",
-      icon: "{{apps_dir}}/phpstorm/bin/webide.png",
+      name: "WEBStorm",
+      exec: "{{apps_dir}}/webstorm/bin/webstorm.sh",
+      icon: "{{apps_dir}}/webstorm/bin/webide.png",
       comment: "Develop with WebStorm!",
       categories: "Development;IDE;",
       startupwmclass: "jetbrains-webstorm"
