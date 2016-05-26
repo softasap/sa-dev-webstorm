@@ -23,6 +23,7 @@
     get_url:
       url=https://download.jetbrains.com/webstorm/WebStorm-{{webstorm_version}}.tar.gz
       dest={{apps_dir}}/webstorm.tar.gz
+      validate_certs=no
     when: webstorm_exist.stat.exists == False
     tags:
       -jetbrains
