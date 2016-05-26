@@ -1,5 +1,10 @@
 ---
 # tasks file for sa-dev-phpstorm
+
+  - name: install curl
+    apt: pkg=curl
+    become: yes
+
   - include: tasks_java.yml
     when: option_install_java
 
